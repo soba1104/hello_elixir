@@ -15,4 +15,9 @@ defmodule MixHello do
   def hello do
     :world
   end
+
+  def get(url) do
+    {:ok, res} = HTTPoison.get(url)
+    res.body
+  end
 end
